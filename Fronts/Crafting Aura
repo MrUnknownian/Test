@@ -1,5 +1,4 @@
 
-
 command /aura [<text>] [<text>] [text]:
   permission: obam.free
  	description: For all Aura related commands
@@ -224,49 +223,49 @@ on break:
 			
 
 #CRAFTING AURA DECISION OF ENCHANT
-{current.aura.%player&) is crafting
+{current.aura.%player&) is "crafting"
    on player crafting of tool:
 
 
 
   set {_ran} to random integer between 1 and 200
  
-  {_ran} is 1
+ {_ran} is 1
       players tool is sword:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with unbreaking 2
       players tool is pickaxe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with unbreaking 2
       players tool is axe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with unbreaking 2
       players tool is shovel:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with unbreaking 2
     
-    {_ran} is 2
+ {_ran} is 2
       players tool is sword:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with sharpness 2
       players tool is pickaxe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with efficentcy 2
       players tool is axe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with efficentcy 2
       players tool is shovel:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with efficentcy 2
     
-    {_ran} is 3
+ {_ran} is 3
       players tool is sword:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with smite 2
       players tool is pickaxe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with fortune 1
       players tool is axe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with fortune 1
       players tool is shovel:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with fortune 1
    
-    {_ran} is 4
+ {_ran} is 4
       players tool is sword:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with fire aspect 1
       players tool is pickaxe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with silk touch 1
       players tool is axe:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with silk touch 1
       players tool is shovel:
-   enchant tool with #RANDOM ENCHANT THAT WE WILL CHOSE
+   enchant tool with silk touch
