@@ -1,4 +1,5 @@
-on spawn of entity:
-  entity is cow:
-    cancel event
+commmand /yolocow:
+
+  trigger:
+
     execute console command "/summon Cow ~ ~1 ~ {Equipment:[{id:261},{id:317},{},{},{id:397,Damage:3,tag:{SkullOwner:MHF_TNT}}],CustomName:Gun Cowder,CustomNameVisible:1,Attributes:[{Name:generic.maxHealth,Base:1}]}"
