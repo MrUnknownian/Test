@@ -50,10 +50,10 @@ argument 1 is "fortune":
                {abstain.%player%} is true or "wait pvp" or "wait abstain":
 	           send "&cThis feature is unavailable while abstaining"
 	           stop
-		  	argument 2 is not set:
-			  	send "&cYou must choose &6on&c or &6off&c." to player
-		  	argument 2 is "on":
-			  	{current.aura.%player%} is "fortune":
+		argument 2 is not set:
+			send "&cYou must choose &6on&c or &6off&c." to player
+		argument 2 is "on":
+			{current.aura.%player%} is "fortune":
 				  	send "&cYou already have a Fortune Aura active." to player
 				    	stop
 				    	
