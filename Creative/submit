@@ -1,0 +1,14 @@
+command /submit:
+  trigger:
+    	{_submit} is not set:
+			set {_submit} to 0
+		add 1 to {_submit}
+		set {_message} to "~%{_submit}% %argument%"
+		set {_submit.list::%{_message}%} to player
+		
+command /finshed:
+  permission: obam.admin
+    
+    loop {_submit.list::*}:
+					send "%{_submit.list::%loop-index%::number}%.&a%loop-index%...By:&e%loop-value%&a...%{_submit}.list::%loop-index%}%"
+    
