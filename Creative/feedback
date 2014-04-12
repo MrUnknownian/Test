@@ -1,0 +1,24 @@
+command /feedback [<text>]
+  permission: rank.Apprentence
+  trigger:
+
+  argument is not set:
+			send "&e/feedback <text>"
+			send "&7Use this to send feedback to the owner"
+			stop
+			
+{_feedback} is not set:
+			set {_feedback} to 0
+		add 1 to {_feedback}
+		set {_message} to "~%{_feedback}% %argument%"
+		set {{_feedback.list::%{_message}%} to player
+		set {_feedback.list::%{_message}%::number} to {_feedback}
+		send "&aYour feedback has been sent"
+		stop
+
+command /messages 
+	 
+	trigger:
+
+				loop {_feedback.list::*}:
+					send "%{_feedback.list::%loop-index%::number}%.&a%loop-index%...By:&e%loop-value%&a...%{_feedback.list::%loop-index%}%"
