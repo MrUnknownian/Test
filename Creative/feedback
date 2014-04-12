@@ -21,4 +21,4 @@ command /messages
 	trigger:
 
 		loop {_feedback.list::*}:
-	         	send "%{_feedback.list::%loop-index%::number}%.&a%loop-index%...By:&e%loop-value%&a...%{_feedback.list::%loop-index%}%"
+	         	send "%{_feedback.list::%loop-index%::number}%.&a%loop-index%...By:&e%loop-value%&a...%{_feedback.list::%loop-index%}"
