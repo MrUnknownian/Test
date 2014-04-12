@@ -10,5 +10,5 @@ command /finshed:
   permission: obam.admin
     
     loop {_submit.list::*}:
-					send "%{_submit.list::%loop-index%::number}%.&a%loop-index%...By:&e%loop-value%&a...%{_submit}.list::%loop-index%}%"
+      send "%{_submit.list::%loop-index%::number}%.&a%loop-index%...By:&e%loop-value%&a...%{_submit}.list::%loop-index%}%"
     
