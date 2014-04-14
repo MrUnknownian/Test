@@ -1,0 +1,5 @@
+world is "hub"
+  every 2 minutes:
+	loop all cows:
+		chance of 2%:	
+			create fake explosion at location of cow
