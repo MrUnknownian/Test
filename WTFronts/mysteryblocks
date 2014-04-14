@@ -1,0 +1,91 @@
+on break of block:
+  block is MHF_Question:
+	 cancel drop event
+     world is "wtfronts"
+      chance of .01%
+		set {_ran} to a random integer between 1 and 2
+			{_ran} is 1
+				/summon Zombie ~ ~1 ~ {Equipment:[{id:276,tag:{ench:[{id:20,lvl:2}]}},{id:313,tag:{ench:[{id:7,lvl:3}]}},{id:312,tag:{ench:[{id:7,lvl:3}]}},{id:311,tag:{ench:[{id:7,lvl:3}]}},{id:397,Damage:3,tag:{SkullOwner:MHF_TNT}}],CustomName:Juggernaut,CustomNameVisible:1,Attributes:[{Name:generic.maxHealth,Base:20},{Name:generic.movementSpeed,Base:0.3}],IsBaby:1}
+	             send "&4You have awoken the juggernaut" to player
+				 stop
+			{_ran} is 2
+				drop named item stack {@envradar}
+				stop
+				 
+      chance of 10%:
+	   set {_ran} to a random integer between 1 and 3
+        {_ran} is 1
+           drop 3 diamonds
+		   stop
+        {_ran} is 2
+           create an explosion at block location
+		   stop
+        {_ran} is 3
+           run console command "/summon Skeleton ~ ~1 ~ {Equipment:[{id:267,tag:{ench:[{id:19,lvl:1}]}},{id:309},{id:308},{id:307},{}]}"
+           stop
+		   
+	  chance of 25%:
+	   set {_ran} to a random integer between 1 and 3
+		{_ran} is 1
+			drop 2 diamonds
+			stop
+		{_ran} is 2
+			drop 2 named item stack {@bandage}
+			stop
+		{_ran} is 3
+			drop named item stack {@superbottle}
+			stop
+		#{_ran} is 4
+			#drop named item stack {@coffee}
+			#stop
+			
+	   set {_ran} to a random integer between 1 and 5
+		{_ran} is 1
+			set {_temp} to player's level
+			   set {_temp} to {_temp} + 15
+		  set player's level to {_temp}
+		{_ran} is 2
+			set {thirst.%player&} to 100
+		{_ran} is 3
+			drop 3 iron
+			stop
+		{_ran} is 4
+			drop 1 diamond
+			stop
+		{_ran} is 5
+			spawn 2 cows at block location
+				run console command "/summon Cow ~ ~1 ~ {CustomName:Boom Cow,CustomNameVisible:1}"
+				stop
+		#{_ran} is 6
+			#set {fatigue.%player%} to 100
+			#stop
+	
+     world is "fronts":
+	  chance of 10%
+		create fake explosion at block event
+      chance of 50%
+		set {_ran} to a random integer between 1 and 2
+			{_ran} is 1
+				drop 3 diamonds at block location
+				stop
+			{_ran} is 2
+				drop 10 iron at block location
+				 stop
+
+	   set {_ran} to a random integer between 1 and 4
+		{_ran} is 1
+			drop 2 diamonds at block location
+			stop
+		{_ran} is 2
+			drop 7 iron at block location
+			stop
+		{_ran} is 3
+			drop 10 lapis at block location
+			stop
+		{_ran} is 4
+			spawn 3 cows at block location
+			stop
+
+on death of cow:
+	name of cow is "Boom Cow":
+		create explosion at cow
