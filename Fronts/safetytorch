@@ -2,7 +2,7 @@ options:
 	safetytorch: redstone torch;&3Safety Torch||&3Crafted by the most skilled coders||&3Mobs dont spawn within 16 blocks
 
 on spawn of entity:
-	entity is skeleton or creeper or zombie or witch:
+	entity is skeleton or creeper or zombie or witch or spider or cave spider:
 		set {_loc} to event-location
 	  	{_loc} is in radius of 8 to named item stack {@safetytorch}:
 				cancel spawn-event
