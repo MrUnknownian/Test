@@ -1,5 +1,5 @@
 options:
-		safetytorch: redstone torch;&3Safety Torch||&3Crafted by the most skilled coders||&3Mobs dont spawn within 16 blocks
+	safetytorch: redstone torch;&3Safety Torch||&3Crafted by the most skilled coders||&3Mobs dont spawn within 16 blocks
 
 on spawn of entity:
 	entity is skeleton or creeper or zombie or witch:
