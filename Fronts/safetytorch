@@ -1,24 +1,28 @@
 options:
-	safetytorch: redstone torch;&3Safety Torch||&3Crafted by the most skilled coders||&3Mobs dont spawn within 16 blocks
+	safetytorch: redstone torch;&3Safety Torch||||&3Mobs dont spawn within the chunk
 
+
+on place of torch:
+    player's tool is named item stack from "{@safetytorch}"
+    set {safety.active.%chunk at event-location%} to true	
+	
+	
+	
 world is "fronts"
 	on spawn of entity:
 		entity is skeleton or creeper or zombie or witch or spider or cave spider or enderman:
-			set {_loc} to event-location
-	  		{_loc} is in radius of 8 to named item stack {@safetytorch}:
-				cancel spawn-event
+			{safety.active.%chunk at event-location%} is true
+				cancel event
 
 
 world is "wtfronts:
 	on spawn of entity:
 		entity is skeleton or creeper or zombie or witch or spider or cave spider or enderman or "&cUnstable Creeper" or "&cUnstable Zombie" or "&cUnstable Skeleton" or "&cUnstable Spider":
-			set {_loc} to event-location
-	  		{_loc} is in radius of 8 to named item stack {@safetytorch}:
-				cancel spawn-event
+			{safety.active.%chunk at event-location%} is true
+				cancel event
 				
 world is "skyblock"
 	on spawn of entity:
 		entity is skeleton or creeper or zombie or witch or spider or cave spider or enderman:
-			set {_loc} to event-location
-	  		{_loc} is in radius of 8 to named item stack {@safetytorch}:
-				cancel spawn-event
+			{safety.active.%chunk at event-location%} is true
+				cancel event
