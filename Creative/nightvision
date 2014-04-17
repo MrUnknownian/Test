@@ -1,5 +1,5 @@
 on join:
-	set {true.player} to 1
+	set {true.%player%} to 1
 
 command /tnight:
 	{true.%player%} is 0:
@@ -13,4 +13,4 @@ command /tnight:
 
 		
 on disconnect:
-	set {true.player} to 1
+	set {true.%player%} to 1
