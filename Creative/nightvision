@@ -2,11 +2,11 @@ on join:
 	set {true.player} to 1
 
 command /tnight:
-	{true.player} is 0:
+	{true.%player%} is 0:
 		apply night vision for 0 seconds
 		set {true.player} to 1
 		stop
-	{true.player} is 1:
+	{true.%player%} is 1:
 		apply night vision for 999 days
 		set {true.player} to 0
 		stop
